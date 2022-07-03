@@ -1,0 +1,41 @@
+<template>
+    <lightning-card>
+        <lightning-button 
+            variant="brand" 
+            label="Create Order" 
+            title="Primary action" 
+            onclick={handleOrder} 
+            class="slds-m-left_x-small slds-align_absolute-center"
+            disabled={show}>
+        </lightning-button>
+
+            <template if:false={show}>
+                <lightning-input 
+                    type="checkbox" 
+                    label="Show Veggie only!" 
+                    onchange={handleVeggie} 
+                    checked={flag}>
+            </lightning-input>
+
+            <ul>
+                <template if:true={flag} for:each={ingredients} for:item="ing">
+                    <li key={ing.id}>
+                        {ing.name}
+                    </li>
+                </template>
+            </ul>
+    
+            <ul>
+                <template iterator:it={veggyIngredients}>
+                    <div if:true={it.first} key={it.value.id}>Veggie ingredients</div>
+                    <div key={it.value.id} if:true={it.first} class="firstItem"></div>
+                    <li key={it.value.id}>
+                        {it.value.name}
+                    </li>
+                    <div key={it.value.id} if:true={it.last} class="lastItem"></div>
+                </template>
+            </ul>
+        </template>
+        
+    </lightning-card>
+</template>

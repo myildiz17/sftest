@@ -1,0 +1,13 @@
+<template>
+
+    <lightning-card>
+        <ul>
+            <template for:each={customers} for:item="customer">
+                <li key={customer.id}>
+                    {customer.Name}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    
+</template>

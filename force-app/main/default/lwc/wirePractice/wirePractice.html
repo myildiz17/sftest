@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Apex wire to property">
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data}  for:item="account">    
+                <div key={account.id} class="slds-box slds-box_xx-small">
+                    <p  >Account Name:{account.Name}</p>
+                    <p  >Account Type:{account.Type}</p>
+                    <p  >Account Industry:{account.Industry}</p>
+                </div>      
+            </template>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Apex wire to function">
+        <template if:true={updatedAccounts}>
+            <template for:each={updatedAccounts}  for:item="account">    
+                <div key={account.id} class="slds-box slds-box_xx-small">
+                    <p  >Account Name:{account.Name}</p>
+                    <p  >Account Type:{account.newType}</p>
+                    <p  >Account Industry:{account.Industry}</p>
+                </div>       
+            </template>
+        </template>
+    </lightning-card>
+</template>

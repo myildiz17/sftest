@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <div>
+            <h1>Below is information about flag</h1>
+        </div>
+        <div>
+            <lightning-input 
+                type="checkbox" l
+                abel="Check to chaneg flag status" 
+                onchange={handleFlag} 
+                checked={flag}>
+            </lightning-input>
+            <template if:true={flag}>
+                <h1>AttentionFlag ismm up. </h1>
+            </template>
+
+            <template if:false={flag}>
+                <h1>AttentionFlag is down. </h1>
+            </template>
+        </div>    
+    </lightning-card>
+  
+    
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <c-p2c-alert-component 
+        message="Selam Kelam Naaber" 
+        header="This is a header"
+        number=20
+        is-valid=true>
+    </c-p2c-alert-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <c-p2c-carousel-component crs={carouselData}>
+    </c-p2c-carousel-component>
+    <div class="slds-var-m-bottom_medium"></div>
+
+    <lightning-input type="number" label="Enter percentage" onkeyup={handlePercent} value={percent} ></lightning-input>
+    <c-p2c-progress-component prct = {parcent}></c-p2c-progress-component>
+    <c-p2c-slider-component></c-p2c-slider-component>
+</template>

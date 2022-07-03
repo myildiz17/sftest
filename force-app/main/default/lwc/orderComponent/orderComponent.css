@@ -1,0 +1,10 @@
+.firstItem{
+    border-top: 5px solid;
+    border-color: green;
+    
+}
+
+.lastItem{
+    border-bottom: 5px solid;
+    border-color: red;
+}

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child to Paremt Communication">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Show"  onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <h1>{msg}</h1>
+            <template if:true={show}>
+                <c-c2p-model-component
+                onclose={handleClose}></c-c2p-model-component>
+            </template>
+            
+        </div>
+    </lightning-card>
+</template>

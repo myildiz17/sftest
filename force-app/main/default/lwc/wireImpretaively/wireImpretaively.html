@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Calling Apex Imperatively">
+        <button class="slds-button slds-button_success" onclick={handleAccounts}>List Accounts</button>
+        <template if:true={accounts}>
+            <template for:each={accounts}  for:item="account">    
+                <div key={account.id} class="slds-box slds-box_xx-small">
+                    <p  >Account Name:{account.Name}</p>
+                    <p  >Account Type:{account.newType}</p>
+                    <p  >Account Industry:{account.Industry}</p>
+                </div>       
+            </template>
+        </template>
+    </lightning-card>
+</template>
